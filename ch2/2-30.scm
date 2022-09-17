@@ -2,14 +2,14 @@
 
 (define (square-tree-iter tree) 
   (cond ((null? tree) nil)
-        ((not (pair? tree)) (expt tree 2))
+        ((not (pair? tree)) (square tree))
         (else (cons (square-tree-iter (car tree)) (square-tree-iter (cdr tree))))))
 
 (define (square-tree-map tree) 
   (map (lambda (sub-tree)
     (if (pair? sub-tree)
         (square-tree-map sub-tree)
-        (expt sub-tree 2))) 
+        (square sub-tree))) 
     tree))
 
 
