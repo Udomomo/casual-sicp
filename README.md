@@ -27,3 +27,6 @@ brew install rlwrap
 - Run code: `gosh filename.scm`
   - Note: Add `(use compat.sicp)` at the first line of each file
 - REPL: `rlwrap gosh`
+
+# Note
+- The REPL above doesn't recognize `nil`. Use `'()` instead.
